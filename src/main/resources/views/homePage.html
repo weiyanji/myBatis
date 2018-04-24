@@ -1,0 +1,86 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>苜蓿草官方商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="https://cdn.bootcss.com/Swiper/4.2.0/css/swiper.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../public/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/index.css" />
+</head>
+<body>
+<div class="contair">
+
+    <!-- 商品轮播图 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" >
+            <div class="swiper-slide" th:each="bar:${bannerList}" > <img  th:src="${bar.getCover_img()}" alt="" /> </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+         <!--如果需要导航按钮-->
+        <!--<div class="swiper-button-prev"></div>-->
+        <!--<div class="swiper-button-next"></div>-->
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <!-- 首页商品展示 -->
+    <a class="home-product"  th:each="item:${goodsList}" th:href="'/goods/goodsDetail?id='+${item.getId()}">
+        <h1>苜蓿颗粒</h1>
+        <p>——原生态苜蓿，高蛋白，高纤维，我们的首选牧草——</p>
+        <img th:src="${item.getGoods_img()}" alt="" />
+        <span class="product-name" th:text="${item.getGoods_name()}">优质苜蓿颗粒</span>
+        <span class="product-price">
+			<span th:text="${item.getGoods_price()}"></span><span style="margin-left: 5px;" th:text="${item.getGoods_unit()}">/&nbsp;t</span>
+		</span>
+    </a>
+
+<!-- 脚部导航 -->
+<ul class="foot-nav">
+    <li ><a href="#" class="active"><img src="../public/images/u170.png" alt=""/><span>商城</span></a></li>
+    <li><a href=""><img src="../public/images/u230.png" alt=""/><span>购物车</span></a></li>
+    <li><a href=""><img src="../public/images/u462.png" alt=""/><span>个人中心</span></a></li>
+</ul>
+
+<!-- 客服悬浮球 -->
+    <div class="product-service"></div>
+
+</div>
+
+
+<script src="https://cdn.bootcss.com/Swiper/4.2.0/js/swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true
+        },
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+    // var swiperContainer = document.getElementById("swiperContainer");
+    // swiperContainer.style.height = document.body.clientWidth * .6 + "px";
+</script>
+</body>
+</html>

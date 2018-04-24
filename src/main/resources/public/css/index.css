@@ -1,0 +1,150 @@
+ 
+ .home-product{
+ 	display: block;
+	width: 100%;
+	height: 320px;
+	margin-bottom: 15px;
+	background-color: #fff;
+}
+
+ /*媒体查询当屏幕尺寸在750px以上时的样式*/
+@media screen and (min-width: 750px) {
+   html {
+       font-size: 22px;
+    }
+    .contair{
+    	background-color: pink;
+    }
+
+     .home-product{
+
+	height: 620px;
+
+	}
+}
+
+
+ /*商品轮播图*/
+
+ .swiper-container{
+ 	margin-top: 10px;
+	 width: 93%;
+	 height: 200px;
+	 margin: 0 auto;
+	 background-color: #fff;
+ }
+
+ .swiper-container .swiper-wrapper .swiper-slide img{
+	 width: 100%;
+	 height: 100%;
+
+ }
+ @media screen and (min-width: 750px) {
+	 html {
+		 font-size: 22px;
+	 }
+
+
+	 .home-product{
+
+		 height: 620px;
+
+	 }
+	 .swiper-container{
+		 width: 93%;
+		 height: 375px;
+		 margin: 0 auto;
+		 background-color: #fff;
+	 }
+ }
+/*商品展示*/
+.home-product h1{
+	font-weight: normal;
+	text-align: center;
+	  color: #323232;
+    font-size: 1.03rem;
+    margin-bottom: .2rem;
+    margin-top: .4rem;
+}
+.home-product p{
+	text-align: center;
+	color: #b6b6b6;
+	font-size: .85rem;
+	margin-bottom: .2rem;
+}
+.home-product img{
+	width: 93%;
+	height: 70%;
+	margin:0 auto;
+	display: block;
+}
+.home-product .product-price{
+	display: inline-block;
+	margin-left: 3%;
+	font-size: 1rem;
+	
+	
+}
+.home-product .product-name{
+	display: block;
+	color: #2b9e5e;
+	margin-left: 3%;
+	font-size: 1.01rem;
+	margin-bottom: .2rem;
+}
+
+/*脚部导航*/
+.foot-nav{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	
+	font-size: .95rem;
+}
+.foot-nav  li{
+	height: 100%;
+	width: 33.33%;
+	float: left;
+	
+
+}
+
+.foot-nav  li a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background-color: #fff;
+	color: #37b06d;
+}
+.foot-nav  li a img{
+	padding-top: 5px;
+	margin: 0 auto;
+	display: block;
+	height: 50%;
+	width: 30%;
+}
+
+.foot-nav  .active{
+	background-color: #37b06d;
+	color: #fff;
+
+}
+
+/*客服悬浮球*/
+.product-service{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color:#37b06d;
+	position: fixed;
+	right: 22px;
+	bottom: 120px;
+
+    background-image: url();
+	    background-repeat: no-repeat;
+    
+    	overflow: visible;
+
+}

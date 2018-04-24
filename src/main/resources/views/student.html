@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>学生信息</title>
+    <style>
+        table{
+            border:solid 1px;
+        }
+        table tr:nth-child(odd){
+            background-color: cornsilk;
+        }
+
+    </style>
+</head>
+<body>
+    <table border="1px" >
+        <tr bgcolor="#bdb76b">
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>专业</th>
+            <th>邮箱</th>
+            <th>头像</th>
+        </tr>
+        <tr th:each="item:${stuList}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.sex}"></td>
+            <td th:text="${item.age}"></td>
+            <td th:text="${item.department}"></td>
+            <td th:text="${item.mail}"></td>
+            <td ><img th:src="${item.head_img}" alt=""/></td>
+
+        </tr>
+    </table>
+</body>
+</html>

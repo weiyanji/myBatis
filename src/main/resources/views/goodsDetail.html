@@ -1,0 +1,70 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="../public/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/goodsDetail.css" />
+    <link href="https://cdn.bootcss.com/Swiper/4.2.0/css/swiper.min.css" rel="stylesheet" />
+
+</head>
+<body>
+<div class="contair" >
+    <!-- 商品基本信息 -->
+
+    <div class="goodsInfo">
+        <!-- 轮播图 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img th:src="${goods.getGoods_img()}" alt=""/></div>
+            </div>
+
+        </div>
+        <p>优质苜蓿颗粒</p>
+        <div>
+            <span class="sp" th:text="${goods.getGoods_price()}" >￥</span> <span th:text="${goods.getGoods_unit()}" > </span><div class="sales">销量：0件</div>
+        </div>
+    </div>
+
+
+    <!-- 商品选项卡 -->
+    <div class="goods-tab">
+        <ul class="tab-nav">
+            <li class="active">商品详情</li>
+            <li>评价</li>
+        </ul>
+        <div class="tab-content">
+            <div class="show" th:text="${goods.getDetail()}">
+
+            </div>
+
+            <div >
+
+                <ul>
+                    <li> <img src="http://p1.qzone.la/upload/5/jqf9k74t.jpg"/><span>格物致知</span><span class="second">2018－04-03</span></li>
+                    <li> 总体服务还是不错的，服务者还是耐心的，质量也很好.</li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<ul class="foot-nav">
+    <li ><a href="#" style="background: #717171;"><img src="" alt=""/><span>购物车</span></a></li>
+    <li><a href=""  style="background: #ff9900;"><img src="" alt=""/><span>加入购物车</span></a></li>
+    <li><a href=""  style="background:#ff6600;"><img src="" alt=""/><span>立即购买</span></a></li>
+</ul>
+
+
+
+
+<script src="../public/js/goodsDetail.js"></script>
+</body>
+</html>

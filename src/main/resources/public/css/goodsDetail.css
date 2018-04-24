@@ -1,0 +1,158 @@
+/*商品详情页样式*/
+
+/*商品基本信息*/
+ .contair .goodsInfo{
+ 	width: 100%;
+ 	height: 435px;
+ 	margin-bottom: 25px;
+ 	background-color: #fff;
+ 	position: relative;
+ }
+
+/*轮播图*/
+.swiper-container{
+	width: 100%;
+	height: 365px;
+}
+
+.swiper-container .swiper-wrapper .swiper-slide img{
+	width: 100%;
+	height: 100%;
+}
+
+.contair .goodsInfo  .sp{
+	display: inline-block;
+	margin-left: 1rem;
+}
+.contair .goodsInfo p{
+	margin-left: 1rem;
+	margin-top: .9rem;
+	color: #37b06d;
+	font-size: 1.2rem;
+}
+
+.contair .goodsInfo .sales{
+	position: absolute;
+	right: 1.2rem;
+	bottom: 1.2rem;
+
+}
+
+/*商品选项卡*/
+	.contair .goods-tab{
+		width: 100%;
+
+	}
+	/*商品导航栏*/
+	.contair .goods-tab .tab-nav{
+		box-sizing:border-box;
+		width: 100%;
+		background-color: pink;
+		height: 3.75rem;
+		color: #666;
+	}
+
+			.contair .goods-tab .tab-nav li{
+
+				text-align: center;
+					line-height: 3.75rem;
+					height: 100%;
+					box-sizing:border-box;
+					display: block;
+					width: 50%;
+					float: left;
+					border-right: 1px solid gray;
+		}
+		.contair .goods-tab .tab-nav li:last-child{
+			
+			border-right: none;
+		}
+		/*标题激活的样式*/
+		.contair .goods-tab .tab-nav .active{
+			color: red;
+			border-top:2px solid red;
+			position: relative;
+		}
+
+		.contair .goods-tab .tab-nav .active:after{
+
+		    content: "";
+		    position: absolute;
+		    right: calc(50% - 2.5px);
+		    border: 5px solid #E80516;
+		    border-right-color: transparent;
+		    border-left-color: transparent;
+		    border-bottom-color: transparent;
+		}
+		/*显示内容样式*/
+		.contair .goods-tab .tab-content div{
+			display: none;
+		}
+
+		.contair .goods-tab .tab-content .show{
+			display: block;
+		}
+		.tab-content ul{
+			width: 100%;
+			
+			border-bottom: 1px solid gray;
+		}
+		.tab-content ul li:first-child{
+			height: 45px;
+			line-height: 60px;
+			position: relative;
+			padding-left: 70px;
+		}
+		.tab-content ul li:first-child img{
+			position: absolute;
+			top:4px;
+			left: 25px;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+		}
+		.tab-content ul li:first-child .second{
+			float: right;
+			margin-right: 25px;
+			
+		}
+		.tab-content ul li:last-child {
+			
+			margin-left: 70px;
+			
+		}
+
+
+		/*脚部导航*/
+.foot-nav{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	
+	font-size: .95rem;
+}
+.foot-nav  li{
+	height: 100%;
+	width: 33.33%;
+	float: left;
+	
+
+}
+
+.foot-nav  li a{
+
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 400%;
+	text-align: center;
+	color: #fff;
+}
+
+
+/*.foot-nav  .active{
+
+	color: #fff;
+
+}*/

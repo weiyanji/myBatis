@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+<p th:text="'Hello！, ' + ${hello} + '!'" >3333</p>
+<div th:text="*{hello}"></div>
+<span th:if="!${hello}">hhhhhhh</span>
+<span th:each="item:${items}">
+    <span th:text="${item}"></span>
+</span>
+
+</body>
+</html>
+
+<script>
+
+</script>
