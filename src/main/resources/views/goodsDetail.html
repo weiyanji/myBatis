@@ -44,11 +44,12 @@
 
             <div >
 
-                <ul>
-                    <li> <img src="http://p1.qzone.la/upload/5/jqf9k74t.jpg"/><span>格物致知</span><span class="second">2018－04-03</span></li>
-                    <li> 总体服务还是不错的，服务者还是耐心的，质量也很好.</li>
+                <ul th:each="eva:${goodsEvaluateList}">
+                    <li> <img th:src="${eva.get('header_img')}"/> <span th:text="${eva.get('open_id')}"></span> <span class="second" th:text="${eva.get('add_time')}"></span></li>
+                    <li th:text="${eva.get('content')}"> </li>
                 </ul>
-
+                    <br/>
+                    <p align="center">没有更多评价内容了</p>
 
             </div>
         </div>

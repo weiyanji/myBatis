@@ -19,4 +19,12 @@ public class BannerServiceImpl extends AbstractService<Banner> implements Banner
     @Resource
     private BannerMapper bannerMapper;
 
+    @Override
+    public String judgeSkip(Integer type,Integer goods_id) {
+        String src="#";
+        if (type==1){
+            src="'/goods/goodsDetail?id='+goods_id";
+        }
+        return src;
+    }
 }
